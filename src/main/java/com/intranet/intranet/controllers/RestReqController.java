@@ -56,7 +56,7 @@ public class RestReqController {
 
     @DeleteMapping({ "reqs/{id}" })
     public ResponseEntity<?> borrarReqPorId(@PathVariable("id") Long id) {
-        reqService.buscarReqPorId(id);
+        reqService.eliminarReqPorId(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
