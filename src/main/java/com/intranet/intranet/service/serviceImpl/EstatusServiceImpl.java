@@ -47,4 +47,11 @@ public class EstatusServiceImpl implements IEstatusService {
         return null;
     }
 
+    @Override
+    public void actualizarEstatus(Long id, Estatus estatus) {
+        Estatus estatusTemp = estatusRepository.findById(id).get();
+        estatusTemp.setNombre(estatus.getNombre());
+        estatusRepository.save(estatusTemp);
+    }
+
 }

@@ -16,6 +16,9 @@ public interface IEstatusService {
 	public void eliminarEstatusPorId(Long id);
 
 	public List<Estatus> buscarTodasLosEstatusPorQuery(int palabraClave);
+
+	public void actualizarEstatus(Long id, Estatus estatus);
+
     
 
 }
